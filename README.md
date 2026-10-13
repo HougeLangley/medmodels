@@ -36,7 +36,7 @@
 
 | 模型 | 用途 | 输入 | 证据 |
 |---|---|---|---|
-| **Boonluksiri2015** DRE 复发评分 | 儿童癫痫缓解期停药后复发风险 | 年龄/缺陷类型/EEG/癫痫样放电 | J Med Assoc Thai 2015 |
+| **Boonluksiri2015** DRE 复发评分 | 儿童癫痫缓解期停药后复发风险 | 年龄/缺陷类型/EEG/癫痫样放电 | J Epilepsy Res 2015 |
 | **Geng2022** DRE 早期预测 | 儿童药物难治性癫痫早期识别 | 起病年龄/SE/局灶/发作>20 次/EEG/神经缺陷/病因 | Front Pediatr 2022,外部验证 |
 | **Chen2026** SEPE 量表 | 成人耐药性癫痫预后评估 | 家族史/智力/发作控制/频率/时相/耐药时间窗 | BMC Neurol 2026 |
 
@@ -48,6 +48,24 @@
 | **Guo2026** 非新冠脓毒症死亡 | ICU 成人非新冠脓毒症院内死亡风险 | 年龄/心率/K/Na/LDH/PT/D-dimer/乳酸 | Sci Rep 2026,MIMIC-IV 外部验证 |
 
 *注:上表中「证据」列为文献身份,完整性能白名单、适用人群、限制声明见应用内各模型详情页与源码注释。*
+
+## 收录论文完整题录(11 篇 → 12 个模型)
+
+本应用收录的每一个模型均实现自以下公开发表的医学研究。原文版权归各作者所有,本仓库仅实现其发表的算法,引用以学术惯例为准。
+
+| # | 模型 | 论文题目 | 期刊 / DOI / PMID |
+|---|---|---|---|
+| 1 | Yang2026 | A Web-Based Dynamic Nomogram for Predicting Refractory *Mycoplasma pneumoniae* Pneumonia in Children | J Vis Exp 2026;(233) · 10.3791/71588 · 42612067 |
+| 2 | Li2026 | A Predictive Nomogram for Severe RSV Infection in Children: A Retrospective, Single-Center Development and Validation Study | J Inflamm Res 2026;19:1652 · 10.2147/JIR.S580432 · 42007299 |
+| 3 | Boonluksiri2015 | Clinical Prediction Rule of Drug Resistant Epilepsy in Children | J Epilepsy Res 2015;5(2):84–88 · 10.14581/jer.15014 · 26819940 |
+| 4 | Geng2022 | Development and validation of a nomogram for the early prediction of drug resistance in children with epilepsy | Front Pediatr 2022;10:905177 · 10.3389/fped.2022.905177 · 36110106 |
+| 5 | Chen2026 | The scale for estimating prognosis of epilepsy to predict in patients with epilepsy: a 506-patient cohort study | BMC Neurol 2026;26:183 · 10.1186/s12883-026-04666-2 · 41699518 |
+| 6 | Wong2022 | Development and validation of a clinical predictive model for severe and critical pediatric COVID-19 infection | PLOS ONE 2022;17(10):e0275761 · 10.1371/journal.pone.0275761 · 36301941 |
+| 7 | Knight2020 (4C) | Risk stratification of patients admitted to hospital with covid-19 using the ISARIC WHO Clinical Characterisation Protocol: development and validation of the 4C Mortality Score | BMJ 2020;370:m3339 · 10.1136/bmj.m3339 · 32907855 |
+| 8 | Guo2026(新冠脓毒症 + 非新冠脓毒症,一文双模型) | Pathogens analysis and modeling of mortality risk in sepsis patients with COVID-19 and without COVID-19 | Sci Rep 2026 · 10.1038/s41598-026-58450-w · 42298051 |
+| 9 | Na2026 | Development and validation of a nomogram for predicting recurrent plastic bronchitis in children with *Mycoplasma pneumoniae* pneumonia | Front Pediatr 2026;14:1959849 · 10.3389/fped.2026.1959849 · 42780927 |
+| 10 | Li2025 | Development and validation of a nomogram for predicting necrotizing pneumonia in children with refractory *Mycoplasma pneumoniae* pneumonia | Ital J Pediatr 2025;51:150 · 10.1186/s13052-025-02006-7 · 40399899 |
+| 11 | Servitje2026 | Early Identification of Children at Risk for Complicated Parapneumonic Pleural Effusion: Development of a Prediction Model | Pediatr Pulmonol 2026;61(9):e71817 · 10.1002/ppul.71817 · 42669040 |
 
 ## 为什么做这个
 
