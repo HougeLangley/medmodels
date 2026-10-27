@@ -94,6 +94,10 @@ data class AssessmentResult(
     val bandExplanation: String,
     /** 结果页附加说明行（键值对形式展示） */
     val details: List<Pair<String, String>>,
+    /** 主值下方小字标签（如 "2 年复发风险"）；null = 用默认文案 */
+    val valueLabel: String? = null,
+    /** 多输出模型的同屏次要输出（标签→显示值），如 AED 的 5y/10y；空 = 单输出 */
+    val extraOutputs: List<Pair<String, String>> = emptyList(),
     /** 验后概率块（仅 LR 型评分模型提供；null = 不显示） */
     val posterior: PosteriorInfo? = null,
 )

@@ -3,7 +3,7 @@
 > 把发表的医学预测模型（列线图 / 评分量表）变成临床医生口袋里的计算器。
 > 论文 → 系数核验 → 锚点测试 → Android 应用——每一步可追溯、可审计。
 
-![版本](https://img.shields.io/badge/version-0.9.1-blue) ![模型数](https://img.shields.io/badge/模型-13-green) ![单测](https://img.shields.io/badge/锚点单测-138%20全绿-brightgreen) ![平台](https://img.shields.io/badge/Android-8.0%2B-orange) ![语言](https://img.shields.io/badge/界面-中文-red)
+![版本](https://img.shields.io/badge/version-0.10.0-blue) ![模型数](https://img.shields.io/badge/模型-21-green) ![单测](https://img.shields.io/badge/锚点单测-186%20全绿-brightgreen) ![平台](https://img.shields.io/badge/Android-8.0%2B-orange) ![语言](https://img.shields.io/badge/界面-中文-red)
 
 ---
 
@@ -13,7 +13,7 @@
 
 本项目**不是**医疗器械,不用于诊断或治疗决策;它是文献学习与临床分层的辅助工具(详见下方「使用限度」)。
 
-## 内置模型(13 个,全部经六项数值核验)
+## 内置模型(21 个,全部经六项数值核验)
 
 ### 呼吸系统(5)
 
@@ -33,13 +33,19 @@
 | **Wong2022** 儿童重症 COVID | 住院儿童重症/危重 COVID 风险 | 婴儿/合并症/惊厥/呕吐/发热/卡他/ANC/Hb/PLT | PLOS ONE 2022,五中心四国 |
 | **Knight2020** 4C 死亡评分 | 成人住院 COVID 死亡风险 | 年龄/性别/合并症数/RR/SpO₂/意识/尿素/CRP | BMJ 2020,57 924 例,被引 800+ |
 
-### 神经系统(3)
+### 神经系统(11)
 
 | 模型 | 用途 | 输入 | 证据 |
 |---|---|---|---|
 | **Boonluksiri2015** DRE 复发评分 | 儿童癫痫缓解期停药后复发风险 | 年龄/缺陷类型/EEG/癫痫样放电 | J Epilepsy Res 2015 |
+| **van Diessen2018** 癫痫确诊概率 | 儿童首诊（≥1 次疑似发作）最终确诊癫痫的概率 | 性别/年龄/6 项发作特征/2 项病史/综合征/EEG 四分类 | Pediatrics 2018,外部验证 AUC 0.86 |
 | **Geng2022** DRE 早期预测 | 儿童药物难治性癫痫早期识别 | 起病年龄/SE/局灶/发作>20 次/EEG/神经缺陷/病因 | Front Pediatr 2022,外部验证 |
 | **Chen2026** SEPE 量表 | 成人耐药性癫痫预后评估 | 家族史/智力/发作控制/频率/时相/耐药时间窗 | BMC Neurol 2026 |
+| **Lamberink2017** 撤药复发风险 | 癫痫缓解期（非手术）撤药后 2y/5y 复发 + 10y 无发作 | 无发作年限/病程/起病年龄/热惊史/发作次数/综合征/迟滞/EEG/AED 数/性别/家族史/局灶 | Lancet Neurol 2017,IPD meta 10 队列 1769 例 |
+| **Lamberink2018** 术后撤药复发 | 儿童癫痫术后撤药 2y/5y 复发 + 6y 无发作 | 撤药年龄/手术间隔/MRI/切除完整性/EEG/发作频率/药数 | Epilepsia 2018,TimeToStop 766 例 15 中心 |
+| **Cloppenborg2022** IQ≥85 / IQ≥70 / DQ≥50 | 儿童癫痫术后 2 年认知达标概率（三条目） | 术前 IQ(或 DQ)/术式/有创 EEG(或 MCD 病因) | Neurology 2022,Utrecht 外部验证 |
+| **Stevelink2022** JME 耐药风险 | 青少年肌阵挛癫痫药物抵抗风险 | 族裔/热惊史/持续状态/精神科共病/家族史/三发作类型/月经期癫痫/EEG 局灶/CAE 史 | eClinicalMedicine 2022,IPD meta 24 队列 2518 例 |
+| **Stevelink2022** JME 撤药复发 | JME 撤药后 2y/5y 复发风险 | 减药时 AED 数/无发作间期/年龄 | 同上（撤药亚组 368 例） |
 
 ### 重症/ICU(2)
 
@@ -50,7 +56,7 @@
 
 *注:上表中「证据」列为文献身份,完整性能白名单、适用人群、限制声明见应用内各模型详情页与源码注释。*
 
-## 收录论文完整题录(12 篇 → 13 个模型)
+## 收录论文完整题录(17 篇 → 21 个模型)
 
 本应用收录的每一个模型均实现自以下公开发表的医学研究。原文版权归各作者所有,本仓库仅实现其发表的算法,引用以学术惯例为准。
 
@@ -68,6 +74,13 @@
 | 10 | Li2025 | Development and validation of a nomogram for predicting necrotizing pneumonia in children with refractory *Mycoplasma pneumoniae* pneumonia | Ital J Pediatr 2025;51:150 · 10.1186/s13052-025-02006-7 · 40399899 |
 | 11 | Servitje2026 | Early Identification of Children at Risk for Complicated Parapneumonic Pleural Effusion: Development of a Prediction Model | Pediatr Pulmonol 2026;61(9):e71817 · 10.1002/ppul.71817 · 42669040 |
 | 12 | Chen2026 (SMPP) | Development and validation of a nomogram for stratifying severe *Mycoplasma pneumoniae* pneumonia risk in children early | Front Pediatr 2026;14:1927137 · 10.3389/fped.2026.1927137 · 42890885 |
+| 13 | van Diessen2018 | A Prediction Model to Determine Childhood Epilepsy After 1 or More Paroxysmal Events | Pediatrics 2018;142(6):e20180931 · 10.1542/peds.2018-0931 · 30389715 |
+| 14 | Lamberink2017 | Individualised prediction model of seizure recurrence and long-term outcomes after withdrawal of antiepileptic drugs in seizure-free patients: a systematic review and individual participant data meta-analysis | Lancet Neurol 2017;16(7):523–531 · 10.1016/S1474-4422(17)30114-X · 28483337 |
+| 15 | Lamberink2018 | Individualized prediction of seizure relapse and outcomes following antiepileptic drug withdrawal after pediatric epilepsy surgery | Epilepsia 2018;59(3):e28–e33 · 10.1111/epi.14020 · 29446447 |
+| 16 | Cloppenborg2022（IQ85/IQ70/DQ50 一文三条目） | Development and Validation of Prediction Models for Developmental and Intellectual Outcome Following Pediatric Epilepsy Surgery | Neurology 2022;98(2):e225–e235 · 10.1212/WNL.0000000000013065 · 34795046 |
+| 17 | Stevelink2022（耐药+撤药 一文双条目） | Individualised prediction of drug resistance and seizure recurrence after medication withdrawal in people with juvenile myoclonic epilepsy | eClinicalMedicine 2022;53:101732 · 10.1016/j.eclinm.2022.101732 · 36467455 |
+
+> 条目 13–17（EPT 癫痫工具集）的算法逐值移植自作者官方开源实现 [wmotte/epilepsypredictiontools](https://github.com/wmotte/epilepsypredictiontools)（Apache-2.0，pin commit `6444da144e`），含分值表/风险表/查表网格，禁插值禁重建。
 
 ## 为什么做这个
 

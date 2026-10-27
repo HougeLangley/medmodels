@@ -99,7 +99,8 @@ fun ResultScreen(
                     )
                     Spacer(Modifier.height(8.dp))
                     Text(
-                        if (result.posterior != null) "DRE 风险评分" else "预测概率（RMPP 风险）",
+                        result.valueLabel
+                            ?: (if (result.posterior != null) "DRE 风险评分" else "预测概率（RMPP 风险）"),
                         fontSize = 12.sp,
                         color = when {
                             highRisk -> MaterialTheme.colorScheme.onErrorContainer.copy(alpha = 0.8f)
@@ -107,6 +108,27 @@ fun ResultScreen(
                             else -> MaterialTheme.colorScheme.onPrimaryContainer.copy(alpha = 0.8f)
                         },
                     )
+                }
+            }
+
+            // 多输出模型的次要输出（EPT 表型：5y/10y 等同屏陈列）
+            if (result.extraOutputs.isNotEmpty()) {
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                ) {
+                    result.extraOutputs.forEach { (label, value) ->
+                        Card(modifier = Modifier.weight(1f)) {
+                            Column(
+                                Modifier.fillMaxWidth().padding(12.dp),
+                                horizontalAlignment = Alignment.CenterHorizontally,
+                            ) {
+                                Text(label, fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                                Spacer(Modifier.height(4.dp))
+                                Text(value, fontSize = 22.sp, fontWeight = FontWeight.Bold)
+                            }
+                        }
+                    }
                 }
             }
 

@@ -12,6 +12,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import com.hermes.medmodels.model.AssessmentModel
 import com.hermes.medmodels.model.AssessmentResult
+import com.hermes.medmodels.model.EptAssets
 import com.hermes.medmodels.model.ModelRegistry
 import com.hermes.medmodels.ui.ModelFormScreen
 import com.hermes.medmodels.ui.ModelListScreen
@@ -20,6 +21,7 @@ import com.hermes.medmodels.ui.ResultScreen
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        EptAssets.init(this)  // EPT 大表资产（JME 撤药二进制）注入 Context
         enableEdgeToEdge()
         setContent {
             MedModelsApp()
