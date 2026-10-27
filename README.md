@@ -157,6 +157,14 @@ adb install -r app/build/outputs/apk/debug/app-debug.apk
 
 ---
 
+## 致谢
+
+- **UMC Utrecht Epilepsy Prediction Tools**（[wmotte/epilepsypredictiontools](https://github.com/wmotte/epilepsypredictiontools),Apache-2.0）——本仓库 8 个癫痫条目（van Diessen 首诊确诊 / Lamberink AED 撤药 / Lamberink TTS 术后撤药 / Cloppenborg 认知预后 ×3 / Stevelink JME ×2）的算法逐值移植自该开源实现。感谢 W. Motte 与 UMC Utrecht 团队把论文模型以可复用的开源形式发布——这正是「论文→床旁工具」最理想的学术开源范式。
+- **EPT 各模型的原著作者团队**：van Diessen E, Lamberink HJ, Otte WM, Boshuisen K, Geleijns K, Braun KPJ（TimeToStop Study Group）, Cloppenborg T, van Schooneveld MMJ, Stevelink R 等——没有严谨的原始研究与透明的数据发布，移植无从谈起。
+- **全部收录论文的作者团队**（见上方「收录论文完整题录」17 篇）——感谢每一位把系数、截距、风险表完整发表的临床研究者：可溯源的数值链是本项目存在的前提。
+
+---
+
 ## 支持开发
 
 如果这个项目对你有帮助,欢迎请作者喝杯咖啡 ☕
