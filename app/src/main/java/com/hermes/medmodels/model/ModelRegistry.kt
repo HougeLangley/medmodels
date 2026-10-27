@@ -7,6 +7,10 @@ package com.hermes.medmodels.model
 object ModelRegistry {
     val all: List<AssessmentModel> = listOf(
         Yang2026Rmpp,
+        Chen2026Smpp,
+        Li2025RmppNecrotizing,
+        Servitje2026Cppe,
+        Na2026PbRecurrence,
         Li2026RsvSevere,
         Boonluksiri2015Dre,
         Geng2022DreEarly,
@@ -15,9 +19,6 @@ object ModelRegistry {
         Knight2020FourC,
         Guo2026SepsisCovid,
         Guo2026SepsisNonCovid,
-        Na2026PbRecurrence,
-        Li2025RmppNecrotizing,
-        Servitje2026Cppe,
         // 新模型加在这里
     )
 

@@ -3,7 +3,7 @@
 > 把发表的医学预测模型（列线图 / 评分量表）变成临床医生口袋里的计算器。
 > 论文 → 系数核验 → 锚点测试 → Android 应用——每一步可追溯、可审计。
 
-![版本](https://img.shields.io/badge/version-0.9.0-blue) ![模型数](https://img.shields.io/badge/模型-12-green) ![单测](https://img.shields.io/badge/锚点单测-125%20全绿-brightgreen) ![平台](https://img.shields.io/badge/Android-8.0%2B-orange) ![语言](https://img.shields.io/badge/界面-中文-red)
+![版本](https://img.shields.io/badge/version-0.9.1-blue) ![模型数](https://img.shields.io/badge/模型-13-green) ![单测](https://img.shields.io/badge/锚点单测-138%20全绿-brightgreen) ![平台](https://img.shields.io/badge/Android-8.0%2B-orange) ![语言](https://img.shields.io/badge/界面-中文-red)
 
 ---
 
@@ -13,13 +13,14 @@
 
 本项目**不是**医疗器械,不用于诊断或治疗决策;它是文献学习与临床分层的辅助工具(详见下方「使用限度」)。
 
-## 内置模型(12 个,全部经六项数值核验)
+## 内置模型(13 个,全部经六项数值核验)
 
-### 呼吸系统(4)
+### 呼吸系统(5)
 
 | 模型 | 用途 | 输入 | 证据 |
 |---|---|---|---|
 | **Yang2026** RMPP 风险预测 | 难治性支原体肺炎患儿进展为 RMPP 的风险 | 热程/体温/LDH/痰栓/实变/低氧 | JoVE 2026,单中心 500 例 |
+| **Chen2026** SMPP 重症预测 | 儿童 MPP 入院 24h 重症(需激素)风险 | 发热天数/气促/大环内酯无反应/IL-6/肺实变 | Front Pediatr 2026,时间外部验证 |
 | **Li2025** 坏死性肺炎风险 | RMPP 进展为坏死性肺炎(NP)的风险 | 发热天数/WBC/IL-6/D-二聚体 | Ital J Pediatr 2025,536 例,验证 AUC 0.920 |
 | **Servitje2026** cPPE 复杂化预测 | 儿童肺炎旁胸腔积液进展为复杂性的风险 | 年龄/胸壁凹陷/CRP≥176.5/积液厚度/纵隔移位 | Pediatr Pulmonol 2026,122 例 |
 | **Na2026** PB 取栓后复发 | MPP 并发塑形性支气管炎取栓后复发风险 | 白蛋白/发热≥72h/肺不张/铸型≥2 叶 | Front Pediatr 2026,双中心 352 例 |
@@ -49,7 +50,7 @@
 
 *注:上表中「证据」列为文献身份,完整性能白名单、适用人群、限制声明见应用内各模型详情页与源码注释。*
 
-## 收录论文完整题录(11 篇 → 12 个模型)
+## 收录论文完整题录(12 篇 → 13 个模型)
 
 本应用收录的每一个模型均实现自以下公开发表的医学研究。原文版权归各作者所有,本仓库仅实现其发表的算法,引用以学术惯例为准。
 
@@ -66,6 +67,7 @@
 | 9 | Na2026 | Development and validation of a nomogram for predicting recurrent plastic bronchitis in children with *Mycoplasma pneumoniae* pneumonia | Front Pediatr 2026;14:1959849 · 10.3389/fped.2026.1959849 · 42780927 |
 | 10 | Li2025 | Development and validation of a nomogram for predicting necrotizing pneumonia in children with refractory *Mycoplasma pneumoniae* pneumonia | Ital J Pediatr 2025;51:150 · 10.1186/s13052-025-02006-7 · 40399899 |
 | 11 | Servitje2026 | Early Identification of Children at Risk for Complicated Parapneumonic Pleural Effusion: Development of a Prediction Model | Pediatr Pulmonol 2026;61(9):e71817 · 10.1002/ppul.71817 · 42669040 |
+| 12 | Chen2026 (SMPP) | Development and validation of a nomogram for stratifying severe *Mycoplasma pneumoniae* pneumonia risk in children early | Front Pediatr 2026;14:1927137 · 10.3389/fped.2026.1927137 · 42890885 |
 
 ## 为什么做这个
 
